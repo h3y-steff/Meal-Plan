@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meal Planner</title>
+  <link rel="stylesheet" href="./style.css"> 
+</head>
+<body onload="loadData()">
+  <div class="container">
+    <h1>Weekly Meal Planner</h1>
+
+    <div>
+      <label for="daySelect">Day:</label>
+      <select id="daySelect">
+        <option value="Sunday">Sunday</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+      </select>
+
+      <label for="mealSelect">Meal:</label>
+      <select id="mealSelect">
+        <option value="Spaghetti">Spaghetti</option>
+        <option value="Salad">Salad</option>
+        <option value="Tacos">Tacos</option>
+        <option value="Pancakes">Pancakes</option>
+      </select>
+
+      <button onclick="addMeal(document.getElementById('daySelect').value, document.getElementById('mealSelect').value)">Add Meal</button>
+    </div>
+
+    <h2>Planned Meals</h2>
+    <div id="mealPlan">
+      <div class="day-section">
+        <h3>Sunday</h3>
+        <ul id="meals-Sunday"></ul>
+      </div>
+      <div class="day-section">
+        <h3>Monday</h3>
+        <ul id="meals-Monday"></ul>
+      </div>
+      <div class="day-section">
+        <h3>Tuesday</h3>
+        <ul id="meals-Tuesday"></ul>
+      </div>
+      <div class="day-section">
+        <h3>Wednesday</h3>
+        <ul id="meals-Wednesday"></ul>
+      </div>
+      <div class="day-section">
+        <h3>Thursday</h3>
+        <ul id="meals-Thursday"></ul>
+      </div>
+      <div class="day-section">
+        <h3>Friday</h3>
+        <ul id="meals-Friday"></ul>
+      </div>
+      <div class="day-section">
+        <h3>Saturday</h3>
+        <ul id="meals-Saturday"></ul>
+      </div>
+    </div>
+
+    <h2>Grocery List</h2>
+    <ul id="grocery-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
